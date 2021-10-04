@@ -1,7 +1,15 @@
 function removeDouble(arr) {
-  return arr.filter((value, index) => {
-    return arr.indexOf(value) === index
-  })
+  for (let i=0; i <arr.length; i++) {
+    if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])){
+      arr.splice(i, i+1)
+    }
+  } return arr
+
+
+
+  // return arr.filter((value, index) => {
+  //   return arr.indexOf(value) === index
+  // })
    
 };
 
