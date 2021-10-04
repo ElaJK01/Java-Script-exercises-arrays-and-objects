@@ -5,16 +5,14 @@ function translate(dict, phrase) {
         if (Object.keys(dict).includes(keysTab[i])) {
             translation.push(dict[keysTab[i]])
         } else {
-            return `Error: missing value: ${keysTab[i]}`
+            throw new Error(`missing value: ${keysTab[i]}`)
         } 
     } return translation.join(" ")
-
-
 
 }
 
 
-
+try {
 console.log(translate({
     "je": "I",
     "suis": "am",
@@ -29,7 +27,6 @@ console.log(translate({
     "dog": "chien",
     "is": "est"}, "the dog is cute"
 )) // 'le chien est mignon'
-
 console.log(translate({
     "the": "le",
     "cute": "mignon",
@@ -37,3 +34,8 @@ console.log(translate({
     "dog": "chien",
     "is": "est"}, "the dog is fluffy"
 )) // 'Error: missing value'
+
+} catch (err){
+    console.error(err)
+
+}
