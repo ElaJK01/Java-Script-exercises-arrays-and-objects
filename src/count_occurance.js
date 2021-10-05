@@ -5,9 +5,8 @@ function countOccurences(phrase){
     //tworzy obiekt do którego dodaje ile razy występują te same wartości
     let count = {}
     phraseToStr.forEach((element) => { count[element] = (count[element] || 0) +1 });
-    
-    
-    //pętla po obiekcie w tórym w parach słowo - ile razy występuje. 
+        
+    //pętla po obiekcie w którym pary: słowo - ile razy występuje. 
     for (key in count) {
         newKey = count[key]
         phraseObj[newKey] = new Array() 
