@@ -5,18 +5,11 @@ function removeDouble(arr) {
     }
   } return arr
 
-
-
-  // return arr.filter((value, index) => {
-  //   return arr.indexOf(value) === index
-  // })
-   
 };
 
 
 
 let stuff = ["suit", "clock", "butter", "suit"];
-console.log(stuff)
 console.log(removeDouble(stuff))
 console.log(stuff)
 
