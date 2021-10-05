@@ -7,9 +7,7 @@ function hasValueDepth(obj, str){
         } else if (typeof valuesArray[i] === "object" && valuesArray[i] !== null){
             return hasValueDepth(valuesArray[i], str)
         } 
-        
-
-    
+         
     } return false
 }
 
@@ -20,7 +18,10 @@ const obj = {
         1961: "Barack Obama",
         1964: "Michelle Obama",
         1935: "Elvis Presley",
-        1984: null
+        1984: {
+                "author": "George Orwell",
+                "genre": "dystopia",
+        }
     }
 }
 
